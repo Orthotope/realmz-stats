@@ -1,6 +1,7 @@
 /* This file is not part of the original implementation; it was added in order
  * to eliminate the Data CD file. */
 
+#include <algorithm>
 #include <filesystem>
 #include <format>
 #include <phosg/Filesystem.hh>
@@ -31,6 +32,7 @@ extern "C" void update_character_files_list() {
     CvtCharacterToPc(&ch);
     characters.emplace_back(std::make_pair(filename, ch.level));
   }
+  std::sort(characters.begin(), characters.end());
 }
 
 extern "C" void get_character_info_from_list(unsigned long index, const char** name, short* level) {
