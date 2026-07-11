@@ -130,14 +130,14 @@ void applyage(short raceid, short agegroup, short direction) {
 
   characterl.currentagegroup = agegroup;
 
-  strength(characterl.st);
+  strength(characterl.st + characterl.magst);
   characterl.tohit -= temp;
   characterl.damage -= damage;
   updatespec(2);
   
   characterl.st += direction * races.agechange[agegroup - 1][0];
 
-  strength(characterl.st);
+  strength(characterl.st + characterl.magst);
   characterl.tohit += temp;
   characterl.damage += damage;
   updatespec(3);
