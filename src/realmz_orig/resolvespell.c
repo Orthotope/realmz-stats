@@ -179,6 +179,10 @@ void resolvespell(void) {
                 for (tt = 0; tt < 8; tt++)
                   c[t].save[tt] += 5;
               break;
+
+            case 6: /***** Luck ****/
+              c[t].lu++;
+              break;
             /* end changes */
 
             case 10: /***** Stamina ****/
