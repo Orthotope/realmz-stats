@@ -139,13 +139,13 @@ void resolvespell(void) {
      */
           switch (spellinfo.size) {
             case 1: /***** Brawn ****/
-              strength(c[t].st);
+              strength(c[t].st + c[t].magst);
               c[t].damage -= damage;
               c[t].tohit -= temp;
               updatespec(2);
 
               c[t].st++;
-              strength(c[t].st);
+              strength(c[t].st + c[t].magst);
               c[t].damage += damage;
               c[t].tohit += temp;
               updatespec(3);
